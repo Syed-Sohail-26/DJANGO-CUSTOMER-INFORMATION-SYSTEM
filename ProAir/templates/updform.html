@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% block content %}
+<form action= "/cust/update/" method = "post">
+{% csrf_token %}
+<input name="id"  value="{{id}}"><br>
+<input name="name" placeholder = "Name" value="{{name}}"><br>
+<input name="add" placeholder = "Email" value="{{email}}"><br>
+<input name="mob" placeholder = "Mobile Number" value="{{mobile}}"><br>
+
+<input type="submit" value="Update"><br>
+
+
+</form>
+{% endblock %}
+
+</body>
+</html>

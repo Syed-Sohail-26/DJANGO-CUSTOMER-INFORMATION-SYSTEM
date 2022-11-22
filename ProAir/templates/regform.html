@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action= "/cust/save/" method = "post">
+{% csrf_token %}
+<input name="name" placeholder = "Name"><br>
+<input name="email" placeholder = "Email Address"><br>
+<input name="mob" placeholder = "Mobile Number"><br>
+<input name="un" placeholder = "Username"><br>
+<input name="pw" placeholder = "Password"><br>
+<input type="submit" value="Save"><br>
+
+
+</form>
+
+</body>
+</html>

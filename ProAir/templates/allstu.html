@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1> ALL CUSTOMERS </h1>
+<table border="1">
+    <tr>
+        <th> id  </th>
+        <th> name </th>
+        <th> email </th>
+        <th> uname </th>
+        <th> pwd </th>
+        <th>mobile </th>
+        <th>Action </th>
+
+    </tr>
+    {% for obj in allstu %}
+
+
+    <tr>
+        <td>{{obj.id }}</td>
+        <td>{{obj.name }}</td>
+        <td>{{obj.email }}</td>
+        <td>{{obj.uname}}</td>
+        <td>{{obj.pwd }}</td>
+        <td>{{obj.mobile }}</td>
+        <td><a href="/update/cust_update/{{obj.id }}">Update</a> |
+    <a href="/delete/cust_delete/{{obj.id }}">Delete</a>
+    </tr>
+    {% endfor %}
+</table>
+{% block content %}
+
+{{msg2}}
+
+{% endblock %}
+</body>
+</html>
